@@ -16,11 +16,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .red
+        cv.backgroundColor = .white
         cv.dataSource = self
         cv.delegate = self
         cv.isPagingEnabled = true
         return cv
+    }()
+    
+    let pages: [Page] = {
+        let firstPage = Page(title: "Share a great listen", message: "It's free to send your books to the people in your life. Every recipient's first book is on us.", imageName: "page1")
+        
+        let secondPage = Page(title: "Send from your library", message: "Tap the more menu next to any book. Choose \"Send this book\"", imageName: "page2")
+        
+        let thirdPage = Page(title: "Send from the player", message: "Tap the menu in the upper corner. Choose \"Send this book\"", imageName: "page3")
+        return [firstPage, secondPage, thirdPage]
     }()
     
     let cellId = "cellId"
@@ -37,11 +46,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return pages.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PageCell
+        let page = pages[indexPath.item]
+        cell.page = page
         return cell
     }
 
