@@ -33,16 +33,46 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }()
     
     let cellId = "cellId"
+    
+    let pageControl: UIPageControl = {
+        let pc = UIPageControl()
+        pc.pageIndicatorTintColor = .lightGray
+        pc.currentPageIndicatorTintColor = UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1)
+        pc.numberOfPages = 3
+        return pc
+    }()
+    
+    let skipButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Skip", for: .normal)
+        button.setTitleColor(UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
+        return button
+    }()
+    
+    let nextButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Next", for: .normal)
+        button.setTitleColor(UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(collectionView)
+        view.addSubview(pageControl)
+        view.addSubview(skipButton)
+        view.addSubview(nextButton)
         
         //use autoLayout instead
         collectionView.anchorToTop(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
         
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: cellId)
+        _ = pageControl.anchor(nil, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)
+        
+        _ = skipButton.anchor(view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50)
+        
+        _ = nextButton.anchor(view.safeAreaLayoutGuide.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -61,32 +91,3 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 }
 
-extension UIView {
-    
-    func anchorToTop(top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil) {
-        
-        anchorWithConstantToTop(top: top, left: left, bottom: bottom, right: right, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
-        
-    }
-    
-    func anchorWithConstantToTop(top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil, topConstant: CGFloat = 0, leftConstant: CGFloat = 0, bottomConstant: CGFloat = 0, rightConstant: CGFloat = 0 ) {
-        
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        if let top = top {
-            topAnchor.constraint(equalTo: top, constant: topConstant).isActive = true
-        }
-        
-        if let bottom = bottom {
-            bottomAnchor.constraint(equalTo: bottom, constant: -bottomConstant).isActive = true
-        }
-        
-        if let left = left {
-            leftAnchor.constraint(equalTo: left, constant: leftConstant).isActive = true
-        }
-        
-        if let right = right {
-            rightAnchor.constraint(equalTo: right, constant: -rightConstant).isActive = true
-        }
-    }
-}
