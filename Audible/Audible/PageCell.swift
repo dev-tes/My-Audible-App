@@ -15,9 +15,14 @@ class PageCell: UICollectionViewCell {
                 return
             }
             
+            var imageName = page.imageName
+            if UIDevice.current.orientation.isLandscape {
+                imageName += "_landscape"
+            }
+            
             let color = UIColor(white: 0.2, alpha: 1)
             
-            imageView.image = UIImage(named: page.imageName)
+            imageView.image = UIImage(named: imageName)
             let attributedText = NSMutableAttributedString(string: page.title, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .medium), NSAttributedString.Key.foregroundColor: color])
             
             attributedText.append(NSAttributedString(string: "\n\n\(page.message)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: color]))
