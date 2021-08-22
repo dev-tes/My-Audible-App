@@ -16,6 +16,7 @@
 		046E00B826D13B8600BF8A6D /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00B726D13B8600BF8A6D /* PageCell.swift */; };
 		046E00BA26D1AAB600BF8A6D /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00B926D1AAB600BF8A6D /* Page.swift */; };
 		046E00BC26D1CA8E00BF8A6D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00BB26D1CA8E00BF8A6D /* Extensions.swift */; };
+		046E00BE26D25B9A00BF8A6D /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00BD26D25B9A00BF8A6D /* LoginCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		046E00B726D13B8600BF8A6D /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		046E00B926D1AAB600BF8A6D /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		046E00BB26D1CA8E00BF8A6D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		046E00BD26D25B9A00BF8A6D /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				046E00A526D1214B00BF8A6D /* SceneDelegate.swift */,
 				046E00BB26D1CA8E00BF8A6D /* Extensions.swift */,
 				046E00A726D1214B00BF8A6D /* ViewController.swift */,
+				046E00BD26D25B9A00BF8A6D /* LoginCell.swift */,
 				046E00A926D1214B00BF8A6D /* Main.storyboard */,
 				046E00AC26D1214D00BF8A6D /* Assets.xcassets */,
 				046E00AE26D1214D00BF8A6D /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046E00A826D1214B00BF8A6D /* ViewController.swift in Sources */,
+				046E00BE26D25B9A00BF8A6D /* LoginCell.swift in Sources */,
 				046E00BC26D1CA8E00BF8A6D /* Extensions.swift in Sources */,
 				046E00A426D1214B00BF8A6D /* AppDelegate.swift in Sources */,
 				046E00B826D13B8600BF8A6D /* PageCell.swift in Sources */,

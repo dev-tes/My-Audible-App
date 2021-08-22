@@ -27,8 +27,6 @@ class PageCell: UICollectionViewCell {
             
             let length = attributedText.string.count
             attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: length))
-
-            //textView.text = "\(page.title) \n\n \(page.message)"
             textView.attributedText = attributedText
             
         }
