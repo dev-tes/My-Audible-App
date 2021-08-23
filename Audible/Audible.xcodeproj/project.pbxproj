@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046A591D26D3157200610572 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A591C26D3157200610572 /* MainNavigationController.swift */; };
 		046E00A426D1214B00BF8A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00A326D1214B00BF8A6D /* AppDelegate.swift */; };
 		046E00A626D1214B00BF8A6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00A526D1214B00BF8A6D /* SceneDelegate.swift */; };
-		046E00A826D1214B00BF8A6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00A726D1214B00BF8A6D /* ViewController.swift */; };
+		046E00A826D1214B00BF8A6D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00A726D1214B00BF8A6D /* LoginController.swift */; };
 		046E00AB26D1214B00BF8A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E00A926D1214B00BF8A6D /* Main.storyboard */; };
 		046E00AD26D1214D00BF8A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046E00AC26D1214D00BF8A6D /* Assets.xcassets */; };
 		046E00B026D1214D00BF8A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E00AE26D1214D00BF8A6D /* LaunchScreen.storyboard */; };
@@ -20,10 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046A591C26D3157200610572 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		046E00A026D1214B00BF8A6D /* Audible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Audible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046E00A326D1214B00BF8A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046E00A526D1214B00BF8A6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		046E00A726D1214B00BF8A6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		046E00A726D1214B00BF8A6D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		046E00AA26D1214B00BF8A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		046E00AC26D1214D00BF8A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		046E00AF26D1214D00BF8A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,14 +68,15 @@
 			children = (
 				046E00A326D1214B00BF8A6D /* AppDelegate.swift */,
 				046E00A526D1214B00BF8A6D /* SceneDelegate.swift */,
-				046E00BB26D1CA8E00BF8A6D /* Extensions.swift */,
-				046E00A726D1214B00BF8A6D /* ViewController.swift */,
-				046E00BD26D25B9A00BF8A6D /* LoginCell.swift */,
+				046E00A726D1214B00BF8A6D /* LoginController.swift */,
 				046E00A926D1214B00BF8A6D /* Main.storyboard */,
 				046E00AC26D1214D00BF8A6D /* Assets.xcassets */,
 				046E00AE26D1214D00BF8A6D /* LaunchScreen.storyboard */,
-				046E00B926D1AAB600BF8A6D /* Page.swift */,
 				046E00B726D13B8600BF8A6D /* PageCell.swift */,
+				046E00B926D1AAB600BF8A6D /* Page.swift */,
+				046E00BB26D1CA8E00BF8A6D /* Extensions.swift */,
+				046E00BD26D25B9A00BF8A6D /* LoginCell.swift */,
+				046A591C26D3157200610572 /* MainNavigationController.swift */,
 				046E00B126D1214D00BF8A6D /* Info.plist */,
 			);
 			path = Audible;
@@ -149,8 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046E00A826D1214B00BF8A6D /* ViewController.swift in Sources */,
+				046E00A826D1214B00BF8A6D /* LoginController.swift in Sources */,
 				046E00BE26D25B9A00BF8A6D /* LoginCell.swift in Sources */,
+				046A591D26D3157200610572 /* MainNavigationController.swift in Sources */,
 				046E00BC26D1CA8E00BF8A6D /* Extensions.swift in Sources */,
 				046E00A426D1214B00BF8A6D /* AppDelegate.swift in Sources */,
 				046E00B826D13B8600BF8A6D /* PageCell.swift in Sources */,
